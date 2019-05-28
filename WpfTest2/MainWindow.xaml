@@ -113,7 +113,7 @@
 
 
             <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1"  Grid.Row="1" Margin="0,18,0,166" >
-                <Label Content="Кegional coefficient(0-5%)" HorizontalAlignment="Center" VerticalAlignment="Top"   Grid.Row="1" Margin="2"/>
+                <Label Content="Regional coefficient(0-5%)" HorizontalAlignment="Center" VerticalAlignment="Top"   Grid.Row="1" Margin="2"/>
                 <TextBox Text="TextBox" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="2" Width="120"/>
             </StackPanel>
 
