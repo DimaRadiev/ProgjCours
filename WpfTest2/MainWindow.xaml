@@ -11,10 +11,15 @@
 
         <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
 
+
+
+
         <Style x:Key="EntryFieldStyle" TargetType="Grid" >
             <Setter Property="HorizontalAlignment" Value="Stretch" />
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
+
+
 
     </Window.Resources>
 
@@ -79,42 +84,71 @@
 
 
             <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Row="1" Margin="0,62,0,10">
-                <CheckBox Content="base/castom" HorizontalAlignment="Center" Margin="5" />
+                <CheckBox Content="base/Custom" HorizontalAlignment="Center" Margin="5" />
                 <Label Content="sum coefficients = 100%" HorizontalAlignment="Center" />
-                <TextBox  VerticalAlignment="Center" Margin="5"  Text="%"  Width="120"/>
-
+               
                 <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
                     <TextBlock Margin="5" Text="10-40" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
                        Visibility="{Binding ElementName=txtUserEntry, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                    <TextBox Name="txtUserEntry" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center" Width="120"/>
+                    <TextBox Name="txtUserEntry" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center"  Margin="5" Width="120"/>
                 </Grid>
 
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5" Text="10-40" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
+                       Visibility="{Binding ElementName=baseOrCustom2, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="baseOrCustom2" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center" Margin="5" Width="120"/>
+                </Grid>
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5" Text="10-40" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
+                       Visibility="{Binding ElementName=baseOrCustom3, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="baseOrCustom3" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center" Margin="5" Width="120"/>
+                </Grid>
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5" Text="10-40" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
+                       Visibility="{Binding ElementName=baseOrCustom4, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="baseOrCustom4" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center" Margin="5" Width="120"/>
+                </Grid>
 
-                <TextBox  VerticalAlignment="Center" Margin="5"  Text="%"  Width="120"/>
-                <TextBox  VerticalAlignment="Center" Margin="5"  Text="%"  Width="120"/>
-                <TextBox  VerticalAlignment="Center" Margin="5"  Text="%"  Width="120"/>
             </StackPanel>
 
 
             <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1"  Grid.Row="1" Margin="0,18,0,166" >
-                <Label Content="Кegional coefficient(0-5%)" HorizontalAlignment="Center" VerticalAlignment="Top"   Grid.Row="1" Margin="2"/>
+                <Label Content="Regional coefficient(0-5%)" HorizontalAlignment="Center" VerticalAlignment="Top"   Grid.Row="1" Margin="2"/>
                 <TextBox Text="TextBox" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="2" Width="120"/>
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="1"  Grid.Row="1" Margin="0,82,0,38" >
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="1"  Grid.Row="1" Margin="0,90,0,-10" >
 
-                <Label Content="Ukr" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1" />
+                <Label Content="Ukr language" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1" />
                 <Label Content="First extra subjects" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1"  />
                 <Label Content="Second extra subjects" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"  />
                 <Label Content="School certificate" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"  />
             </StackPanel>
 
-            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="2"  Grid.Row="1" Margin="0,75,0,23" >
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="2"  Grid.Row="1" Margin="0,62,0,10" >
+                <Label Content="sum coefficients = 100%" HorizontalAlignment="Center" Opacity="0" />
                 <Label Content="sum coefficients = 100%" HorizontalAlignment="Center" />
-                <TextBox HorizontalAlignment="Center" Margin="5" Text="TextBox"  Width="120"/>
-                <TextBox  HorizontalAlignment="Center" Margin="5"  Text="TextBox"  Width="120"/>
-                <TextBox HorizontalAlignment="Center" Margin="5"  Text="TextBox"  Width="120"/>
-                <TextBox HorizontalAlignment="Center" Margin="5"  Text="TextBox"  Width="120"/>
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5" Text="10-40" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
+                       Visibility="{Binding ElementName=newCustom, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="newCustom" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center"  Margin="5" Width="120"/>
+                </Grid>
+
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5" Text="10-40" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
+                       Visibility="{Binding ElementName=newCustom2, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="newCustom2" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center" Margin="5" Width="120"/>
+                </Grid>
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5" Text="10-40" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
+                       Visibility="{Binding ElementName=newCustom3, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="newCustom3" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center" Margin="5" Width="120"/>
+                </Grid>
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5" Text="5-20" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
+                       Visibility="{Binding ElementName=newCustom4, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="newCustom4" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center" Margin="5" Width="120"/>
+                </Grid>
             </StackPanel>
 
 
