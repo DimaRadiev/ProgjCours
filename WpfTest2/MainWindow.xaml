@@ -1,0 +1,196 @@
+﻿<Window x:Class="WpfTest2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="700" Width="550" MinHeight="700" MinWidth="550">
+
+    <Window.Resources>
+
+        <SolidColorBrush x:Key="brushWatermarkBackground" Color="White" />
+        <SolidColorBrush x:Key="brushWatermarkForeground" Color="LightSteelBlue" />
+        <SolidColorBrush x:Key="brushWatermarkBorder" Color="Indigo" />
+
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+        <Style x:Key="EntryFieldStyle" TargetType="Grid" >
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="328*"/>
+            <RowDefinition Height="291*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Grid.Row="0">
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="550">
+                <Button Content="Open file" Margin="10,5,10,5" Width="Auto"/>
+                <Button Content="Cleaning DB" Margin="10,5,10,5" Width="Auto"/>
+                <Button Content="Show DB" Margin="10,5,10,5" Width="Auto"/>
+                <Button Content="Save DB results" Margin="10,5,10,5" Width="Auto"/>
+
+            </StackPanel>
+
+        </Grid>
+
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="59*"/>
+                <RowDefinition Height="13*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+
+
+
+            <Label Content="previous results" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="44,7" />
+            <Label Content="new results" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="56,7" Grid.Column="2"/>
+
+
+
+            <ComboBox VerticalAlignment="Center"  Grid.Column="1" Margin="0,9">
+                <CheckBox Content="Hist"/>
+                <CheckBox Content="Math"/>
+                <CheckBox Content="Phys"/>
+                <CheckBox Content="Chem"/>
+                <CheckBox Content="Bio"/>
+                <CheckBox Content="Geo"/>
+                <CheckBox Content="Eng"/>
+                <CheckBox Content="Fr"/>
+                <CheckBox Content="Deu"/>
+                <CheckBox Content="Sp"/>
+                <CheckBox Content="Rus"/>
+            </ComboBox>
+            <Label Content="two extra subjects" HorizontalAlignment="Center"  Margin="37,7" VerticalAlignment="Center"  Grid.Column="1" IsHitTestVisible="False"/>
+
+
+
+
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Row="1" Margin="0,62,0,10">
+                <CheckBox Content="base/castom" HorizontalAlignment="Center" Margin="5" />
+                <Label Content="sum coefficients = 100%" HorizontalAlignment="Center" />
+                <TextBox  VerticalAlignment="Center" Margin="5"  Text="%"  Width="120"/>
+
+                <Grid Grid.Row="0" Background="{StaticResource brushWatermarkBackground}" Style="{StaticResource EntryFieldStyle}" >
+                    <TextBlock Margin="5" Text="10-40" Foreground="{StaticResource brushWatermarkForeground}" VerticalAlignment="Center" Width="100"
+                       Visibility="{Binding ElementName=txtUserEntry, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Name="txtUserEntry" Background="Transparent" BorderBrush="{StaticResource brushWatermarkBorder}" VerticalAlignment="Center" Width="120"/>
+                </Grid>
+
+
+                <TextBox  VerticalAlignment="Center" Margin="5"  Text="%"  Width="120"/>
+                <TextBox  VerticalAlignment="Center" Margin="5"  Text="%"  Width="120"/>
+                <TextBox  VerticalAlignment="Center" Margin="5"  Text="%"  Width="120"/>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="1"  Grid.Row="1" Margin="0,18,0,166" >
+                <Label Content="Кegional coefficient(0-5%)" HorizontalAlignment="Center" VerticalAlignment="Top"   Grid.Row="1" Margin="2"/>
+                <TextBox Text="TextBox" HorizontalAlignment="Center" VerticalAlignment="Top"  Margin="2" Width="120"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="1"  Grid.Row="1" Margin="0,82,0,38" >
+
+                <Label Content="Ukr" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1" />
+                <Label Content="First extra subjects" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="1"  />
+                <Label Content="Second extra subjects" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"  />
+                <Label Content="School certificate" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="2"  />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.ColumnSpan="1" Grid.Column="2"  Grid.Row="1" Margin="0,75,0,23" >
+                <Label Content="sum coefficients = 100%" HorizontalAlignment="Center" />
+                <TextBox HorizontalAlignment="Center" Margin="5" Text="TextBox"  Width="120"/>
+                <TextBox  HorizontalAlignment="Center" Margin="5"  Text="TextBox"  Width="120"/>
+                <TextBox HorizontalAlignment="Center" Margin="5"  Text="TextBox"  Width="120"/>
+                <TextBox HorizontalAlignment="Center" Margin="5"  Text="TextBox"  Width="120"/>
+            </StackPanel>
+
+
+            <Label VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Content= "Results"  Grid.ColumnSpan="3" Grid.Row="2" FontSize="36"  />
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="0" Margin="5" >
+                <TextBlock VerticalAlignment="Center" Margin="5,0,-3,0" Text="point average"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True" />
+                <TextBlock Text="100-120" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="120-140" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="140-160" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="160-180" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="180-200" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+            </StackPanel>
+
+
+
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Grid.Column="1" Margin="5,6,5,0" >
+                <TextBlock Text="in %" HorizontalAlignment="Center" Margin="0"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+
+
+            </StackPanel>
+
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="3" Margin="5" >
+                <TextBlock VerticalAlignment="Center" Margin="5,0,-3,0" Text=" point average"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="100-120" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="120-140" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="140-160" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="160-180" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="180-200" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Grid.Column="4" Margin="5,6,5,0" >
+                <TextBlock Text="in %" HorizontalAlignment="Center" Margin="0"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+            </StackPanel>
+
+
+
+            <Button Content="Calculation" Grid.Column="2" Margin="22" Height ="auto"/>
+        </Grid>
+
+    </Grid>
+
+</Window>
