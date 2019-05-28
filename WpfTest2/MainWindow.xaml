@@ -121,6 +121,75 @@
             <Label VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Center" Content= "Results"  Grid.ColumnSpan="3" Grid.Row="2" FontSize="36"  />
         </Grid>
 
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1.*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="0" Margin="5" >
+                <TextBlock VerticalAlignment="Center" Margin="5,0,-3,0" Text="point average"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True" />
+                <TextBlock Text="100-120" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="120-140" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="140-160" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="160-180" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="180-200" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+            </StackPanel>
+
+
+
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Grid.Column="1" Margin="5,6,5,0" >
+                <TextBlock Text="in %" HorizontalAlignment="Center" Margin="0"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+
+
+            </StackPanel>
+
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Grid.Column="3" Margin="5" >
+                <TextBlock VerticalAlignment="Center" Margin="5,0,-3,0" Text=" point average"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="100-120" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="120-140" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="140-160" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="160-180" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+                <TextBlock Text="180-200" VerticalAlignment="Center" Margin="5,0,-3,0"/>
+                <TextBox VerticalAlignment="Center" Margin="5" Text="TextBox" IsReadOnly="True"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical" VerticalAlignment="Top" Grid.Column="4" Margin="5,6,5,0" >
+                <TextBlock Text="in %" HorizontalAlignment="Center" Margin="0"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+                <TextBox VerticalAlignment="Center" Margin="13" Text="TextBox" IsReadOnly="True"/>
+            </StackPanel>
+
+
+
+            <Button Content="Calculation" Grid.Column="2" Margin="22" Height ="auto"/>
+        </Grid>
 
     </Grid>
 
